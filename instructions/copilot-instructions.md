@@ -1,7 +1,10 @@
 # Copilot Instructions
 
-<!-- This file tells GitHub Copilot how to behave in this project.
-     Uncomment and fill in any section to add more specific guidance. -->
+<!--
+  This file has general instructions for GitHub Copilot on how to behave in this project.
+
+  Uncomment and fill in any section to add more specific guidance.
+-->
 
 ## General Principles
 

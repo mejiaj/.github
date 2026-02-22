@@ -3,6 +3,11 @@
 <!-- This file tells GitHub Copilot how to behave in this project.
      Uncomment and fill in any section to add more specific guidance. -->
 
+## General Principles
+
+- **Show, don't tell.** Use code examples to illustrate suggestions — don't just describe what to do.
+- **Plain language.** Write comments, docs, and feedback in clear, simple English.
+
 ## Project Context
 
 - **Name**: <!-- e.g. "Acme Admin Portal" -->
@@ -33,11 +38,11 @@ More specific guidance to consider adding:
 - Apply language and framework best practices by default.
 - Prefer the simplest solution that works.
 - Use standard library or built-ins over third-party dependencies where possible.
+- Reference official docs as the source of truth (MDN, language specs, framework docs)
 
 <!--
 More specific guidance to consider adding:
 - List any specs or standards this project follows, e.g. "REST API follows JSON:API spec"
-- Reference official docs as the source of truth (MDN, language specs, framework docs)
 -->
 
 ---
@@ -47,11 +52,11 @@ More specific guidance to consider adding:
 - Never hardcode secrets or credentials — use environment variables.
 - Validate and sanitize all user input.
 - Never log sensitive data (passwords, tokens, PII).
+- Apply least privilege — request only the permissions actually needed
+- Flag auth, payment, or PII code with a `# security-sensitive` comment
 
 <!--
 More specific guidance to consider adding:
-- Apply least privilege — request only the permissions actually needed
-- Flag auth, payment, or PII code with a `# security-sensitive` comment
 - Note any project-specific requirements, e.g. "Auth is handled by Auth0 — do not roll custom auth"
 -->
 
@@ -62,11 +67,11 @@ More specific guidance to consider adding:
 - Follow WCAG 2.1 AA as a baseline for all UI code.
 - Use semantic HTML over generic `<div>` where possible.
 - Every image needs a meaningful `alt` attribute, or `alt=""` if decorative.
+- All interactive elements must be keyboard accessible
+- Don't rely on color alone to convey meaning — pair it with text or an icon
 
 <!--
 More specific guidance to consider adding:
-- All interactive elements must be keyboard accessible
-- Don't rely on color alone to convey meaning — pair it with text or an icon
 - Note any accessibility tooling in use, e.g. "Run `axe` in CI"
 -->
 
@@ -76,10 +81,10 @@ More specific guidance to consider adding:
 
 - Test the happy path, edge cases, and error conditions.
 - Test behavior and outcomes — not implementation details.
+- Test names should describe expected behavior, e.g. `returns 404 when user not found`
 
 <!--
 More specific guidance to consider adding:
-- Test names should describe expected behavior, e.g. `returns 404 when user not found`
 - Specify your test framework and coverage threshold, e.g. "Jest, 80% coverage required"
 -->
 
@@ -87,26 +92,27 @@ More specific guidance to consider adding:
 
 ## Agent & Tool Use
 
+- Suggest changes — do not apply edits directly to files.
 - Check if a file or function already exists before creating a new one.
 - Only change files within the current task's scope.
+- Check the standard library before adding a new dependency
+- List available tools or MCP servers, e.g. "Use the `github` MCP for PR and issue lookups"
 
 <!--
 More specific guidance to consider adding:
 - Prefer editing existing files over creating new ones for small changes
-- Check the standard library before adding a new dependency
-- List available tools or MCP servers, e.g. "Use the `github` MCP for PR and issue lookups"
 -->
 
 ---
 
 ## Plain Language
 
-- Comments explain *why*, not *what*.
+- Comments explain _why_, not _what_.
 - Keep inline comments short and specific.
+- Write comments in plain English — avoid filler like "this function handles..."
 
 <!--
 More specific guidance to consider adding:
-- Write comments in plain English — avoid filler like "this function handles..."
 - If a comment needs more than two lines, consider restructuring the code instead
 -->
 

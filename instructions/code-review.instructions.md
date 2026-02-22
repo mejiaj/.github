@@ -1,6 +1,6 @@
 ---
 agent: agent
-description: 'Perform comprehensive code review as a senior technical lead, evaluating correctness, quality, maintainability, and adherence to standards with actionable feedback'
+description: "Perform comprehensive code review as a senior technical lead, evaluating correctness, quality, maintainability, and adherence to standards with actionable feedback"
 ---
 
 # Task: Code Review as Senior Technical Lead
@@ -34,12 +34,14 @@ Review in this order of priority:
 - "Perfect is the enemy of good" — focus on reducing risk, not achieving perfection
 
 **Language and formatting:**
+
 - Use plain, direct language — avoid jargon unless it's standard in the project's stack
 - Write short sentences. One idea per sentence.
 - Each feedback item must state: what the issue is, why it matters, and what to do about it
 - Use high contrast formatting: code in backticks, file paths in backticks, severity labels clearly marked
 
 **Severity scale:**
+
 - `[low]` — Non-blocking. Nice to address but not required.
 - `[medium]` — Worth fixing before merge.
 - `[high]` — Must fix before merge.
@@ -62,37 +64,48 @@ Apply all of the following to every review:
 ## Output Format
 
 ### Summary
+
 2–3 sentences on what changed and your overall assessment. For line-specific reviews, state the line range explicitly.
 
 ### Strengths
+
 2–3 genuine positives.
 
 ### Required Changes `[high]`
+
 Must fix before merging. For each item:
+
 - State the issue in plain language
 - Explain the risk of leaving it as-is
 - Reference the exact line(s)
 - Show a suggested fix in a fenced code block where possible
 
 ### Recommended Improvements `[medium]`
+
 Worth addressing before merge. For each item:
+
 - State the issue in plain language
 - Explain the benefit of fixing it
 - Reference the exact line(s)
 - Show a suggested fix where possible
 
 ### Non-blocking `[low]`
+
 Optional improvements. Keep each item to 1–2 sentences.
 
 ### Questions for Author
+
 Only include questions not already answered by the diff. Consider:
+
 - What problem does this solve, and why this approach?
 - Were other approaches considered?
 - Are there areas you'd like specific feedback on?
 - Are there deployment steps, feature flags, or rollback plans needed?
 
 ### Testing Recommendations
+
 Specific scenarios that should be added or verified.
 
 ### Overall Assessment
+
 One of: **Approved** / **Approved with suggestions** / **Requires changes**
